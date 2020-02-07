@@ -2,9 +2,9 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-   var nombre;
-   nombre = document.querySelector('#elNombre');
-   alert(nombre)
+   var dato;
+   dato = document.getElementById('elNombre').value;
+   alert(dato)
 }
 
 
