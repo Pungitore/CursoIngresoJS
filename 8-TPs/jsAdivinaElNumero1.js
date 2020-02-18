@@ -44,7 +44,7 @@ function verificar()
       }
     else { 
       if (numeroIngresadoParseado == numeroSecreto)
-        alert("Adivinaste al numero secreto! en:  " + intento + " intentos");
+        alert("Adivinaste al numero secreto! el numero era:  " + numeroSecreto );
         else {
           alert("Ingrese un numero");
         }
