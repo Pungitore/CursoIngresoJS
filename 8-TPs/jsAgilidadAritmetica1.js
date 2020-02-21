@@ -10,29 +10,59 @@ var respuesta;
 var primerNumero;
 var segundoNumero;
 var numeroUno;
-var numeroDos2;
+var numeroDos;
+var operacionRandom;
+var operaciones;
 
 function comenzar()
 {
     var max;
     var min;
-    
-    primerNumero = document.getElementById("PrimerNumero").value
-    segundoNumero = document.getElementById("SegundoNumero").value
+    var maxOperador;
+    var minOperador;
+
     max = 11;
     min = 1;
-    
+    maxOperador = 5;
+    minOperador = 1;
+
     numeroUno = Math.floor((Math.random() * (max-min)) + min);
     console.log(numeroUno);
-    primerNumero = numeroUno;
 
-    numeroDos2 = Math.floor((Math.random() * (max-min)) + min);
-    console.log(numeroDos2);
-    segundoNumero = numeroDos2;
+
+    numeroDos = Math.floor((Math.random() * (max-min)) + min);
+    console.log(numeroDos);
+
+    operacionRandom = Math.floor((Math.random() * (maxOperador-minOperador)) + minOperador);
+    console.log(operacionRandom);
+
+    switch(operacionRandom) {
+        case 1: 
+        operaciones = "*";
+        break;
+        
+        case 2:
+        operaciones = "/";
+        break;
+       
+        case 3:
+        operaciones = "-";
+        break;
+        
+        default:
+        operaciones = "+";
+        break;
+    }
+    
+
+    document.getElementById("Operador").value = operaciones;
+    document.getElementById("PrimerNumero").value = numeroUno;
+    document.getElementById("SegundoNumero").value = numeroDos;
 
 }//FIN DE LA FUNCIÓN
+
 function Responder()
 {
-	
+    respuesta =  document.getElementById("Respuesta").value;
 
 }//FIN DE LA FUNCIÓN

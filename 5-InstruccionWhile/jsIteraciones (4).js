@@ -7,5 +7,5 @@ function mostrar() {
 		numero = parseInt(numero);
 
 	}
-	document.getElementById("Numero").value = numero
+	document.getElementById("Numero").value = numero;
 }//FIN DE LA FUNCIÓN

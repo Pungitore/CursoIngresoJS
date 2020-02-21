@@ -1,4 +1,4 @@
-function mostrar()
+/*function mostrar()
 {	
 	var numeroAscendente = 0;
 
@@ -8,4 +8,15 @@ function mostrar()
 		console.log(numeroAscendente);
 }
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN*/
+
+function mostrar()
+{	
+	var numeroAscendente = 0;
+
+	do {
+		numeroAscendente++
+		console.log(numeroAscendente);
+	}	while(numeroAscendente < 10);
+
+}
