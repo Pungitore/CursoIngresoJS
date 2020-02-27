@@ -13,6 +13,8 @@ var numeroUno;
 var numeroDos;
 var operacionRandom;
 var operaciones;
+var tiempoInicio;
+
 
 function comenzar()
 {
@@ -36,22 +38,27 @@ function comenzar()
     operacionRandom = Math.floor((Math.random() * (maxOperador-minOperador)) + minOperador);
     console.log(operacionRandom);
 
+    tiempoInicio = new Date();
+
     switch(operacionRandom) {
         case 1: 
-        operaciones = "*";
-        break;
+            operaciones = "+";
+            break;
         
         case 2:
-        operaciones = "/";
-        break;
+            operaciones = "-";
+            break;
        
         case 3:
-        operaciones = "-";
-        break;
+            operaciones = "*";
+            break;
         
+        case 4:
+            operaciones = "7";
+            break;
+
         default:
-        operaciones = "+";
-        break;
+            break;
     }
     
 
@@ -59,10 +66,56 @@ function comenzar()
     document.getElementById("PrimerNumero").value = numeroUno;
     document.getElementById("SegundoNumero").value = numeroDos;
 
+    setTimeout(terminarJuego, 4000 );
+
 }//FIN DE LA FUNCIÓN
 
 function Responder()
-{
+{   
+    var respuestaFinal;
+
     respuesta =  document.getElementById("Respuesta").value;
+    respuesta = parseInt(respuesta);
+
+        switch(operacionRandom) {
+        case 1: 
+            respuestaFinal = numeroUno + numeroDos ;
+            break;
+
+        case 2:
+            respuestaFinal = numeroUno - numeroDos;
+            break;
+       
+        case 3:
+            respuestaFinal = numeroUno * numeroDos;
+            break;
+        
+        case 4:
+            respuestaFinals = numeroUno / numeroDos;
+            break;
+
+        default:
+            break;
+    }
+        
+    if(respuestaFinal == respuesta)
+    {
+        alert("Acertaste.");
+        comenzar()
+        document.getElementById("Respuesta").value = "";
+    }
+    else { 
+        alert("Fallaste.")
+    }
+
 
 }//FIN DE LA FUNCIÓN
+
+function terminarJuego() {
+    alert("Juego Terminado.");
+    var otro = confirm("Desea comenzar otro?");
+
+    if(otro){
+        comenzar()
+    }
+}

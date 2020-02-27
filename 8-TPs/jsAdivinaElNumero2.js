@@ -28,7 +28,7 @@ function comenzar()
 
 function verificar()
 {
-	var numeroIngresado;
+  	var numeroIngresado;
     var numeroIngresadoParseado;
    
     contadorIntentos = contadorIntentos + 1;
