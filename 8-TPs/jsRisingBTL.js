@@ -72,7 +72,7 @@ function ComenzarIngreso() {
     //PUNTO 5
     var legajo = prompt("ingrese un legajo de nomas de 4 digitos.")
 
-    while (legajo >= 1000 || legajo <= 9999 || isNaN(legajo)) {
+    while (legajo < 1000 || legajo > 9999) {
         legajo = prompt("Ingrese un legajo valido");
         legajo = parseInt(legajo);
 
@@ -84,20 +84,20 @@ function ComenzarIngreso() {
     document.getElementById("Legajo").value = legajo;
 
     //PUNTO6
-var nacionalidad = prompt("Nacionalidad: “A” para argentinos, “E” para extranjeros, “N” para nacionalizados");
+    var nacionalidad = prompt("Nacionalidad: “A” para argentinos, “E” para extranjeros, “N” para nacionalizados");
 
-while (nacionalidad.toLowerCase() != "a" && nacionalidad.toLowerCase() != "e" && nacionalidad.toLowerCase() != "n") {
-    nacionalidad = prompt("Ingrese una nacionalidad valida.");
-}
-if (nacionalidad == "a") {
-    document.getElementById("Nacionalidad").value = "Argentina";
-}
-else if (nacionalidad == "e") {
-    document.getElementById("Nacionalidad").value = "Extranjero";
-}
-else {
-    document.getElementById("Nacionalidad").value = "Nacionalizado";
-}
+    while (nacionalidad.toLowerCase() != "a" && nacionalidad.toLowerCase() != "e" && nacionalidad.toLowerCase() != "n") {
+        nacionalidad = prompt("Ingrese una nacionalidad valida.");
+    }
+    if (nacionalidad == "a") {
+        document.getElementById("Nacionalidad").value = "Argentina";
+    }
+    else if (nacionalidad == "e") {
+        document.getElementById("Nacionalidad").value = "Extranjero";
+    }
+    else {
+        document.getElementById("Nacionalidad").value = "Nacionalizado";
+    }
 
 
 }

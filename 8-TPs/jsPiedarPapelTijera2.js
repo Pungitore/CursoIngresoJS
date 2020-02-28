@@ -88,5 +88,5 @@ function tijera() {
 }//FIN DE LA FUNCIÓN
 
 function mostrarResultado() {
-
+		comenzar()
 }
