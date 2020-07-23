@@ -60,7 +60,7 @@ function mostrar() {
                 maximo = numero;
                 maximoLetra = letra;
             }
-            if (numero < minimo )
+            else if (numero < minimo )
             {
                 minimo = numero;
                 minimo = letra;
@@ -81,3 +81,17 @@ function mostrar() {
     document.write("La cantidad de numeros pares son  :" + contadorumerosPares + "<br>" + "La cantidad de numeros impares son:  " + contadorNumerosImpares + "<br>" + "La cantidad de ceros son  :" + cantidadCeros + "<br>" + "El promedio de los numeros positivos: " + promedioTotalPositivo + "<br>" + "La suma de los negativos: " + acumuladorNegativo + "Numero Mayo: " + maximo + "<br>" + "Letra Mayor: " + maximoLetra);
 
 }
+
+
+
+
+
+do {
+    
+    //  VALIDACIONES
+
+
+
+
+    contador++
+} while (contadorDeJugadores < 5);

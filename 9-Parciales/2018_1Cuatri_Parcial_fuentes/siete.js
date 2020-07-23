@@ -25,17 +25,8 @@ function mostrar() {
 
         //PUNTO A
         acumuladorNotas += nota;
-
-        //PUNTO B
-        /*if(contador == 1){
-            notaMasBaja = nota;
-        }
-        else {
-            if (nota < notaMasBaja)
-            {
-                notaMasBaja = nota;
-            }
-        }*/
+ 
+       
         if( nota < notaMasBaja){
             notaMasBaja = nota;
             sexoNotaBaja = sexo;
@@ -50,10 +41,10 @@ function mostrar() {
     }
         //PUNTO A
         promedioNotas = acumuladorNotas / contador;
-        console.log(promedioNotas);
-        console.log(notaMasBaja);
-        console.log(sexoNotaBaja);
-        console.log(contadorVarones);
+        console.log("Promedio: " + promedioNotas);
+        console.log("Nota mas baja: " + notaMasBaja);
+        console.log("Sexo nota mas baja: " + sexoNotaBaja);
+        console.log("Varones con nota 6 o mayor: " + contadorVarones);
 }
 
 

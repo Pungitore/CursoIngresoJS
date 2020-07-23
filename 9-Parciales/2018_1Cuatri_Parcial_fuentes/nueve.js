@@ -78,6 +78,11 @@ function mostrar() {
         promedioPesoTotal = alert("No ingreso productos");
     }
   
-    document.write("Cantidad de temperturas pares: " + contadorTemperaturasPares + "<br>" + "La marca del producto mas pesado: " + maximoMarca + "<br>" + "Cantidad de productos menores a 0 grados: " + contadorMarcaMenorACero + "<br>" + "Promedio de peso total: " + promedioPesoTotal + "<br>" + "Peso Maximo: " + maximoPeso + "<br>" + "Peso Minimo: " + minimoPeso);
-
+    document.write("Cantidad de temperturas pares: " + contadorTemperaturasPares + "<br>");
+    document.write( "La marca del producto mas pesado: " + maximoMarca + "<br>");
+    document.write("Cantidad de productos menores a 0 grados: " + contadorMarcaMenorACero + "<br>");
+    document.write ("Promedio de peso total: " + promedioPesoTotal + "<br>") ;
+    document.write ("Peso Maximo: " + maximoPeso + "<br>") ;
+    document.write ("Peso Minimo: " + minimoPeso);
+   
 }
